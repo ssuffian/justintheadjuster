@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Anchor offset for fixed navbar ── */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #8B6914; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+
+/* ── Gold shimmer text ── */
+.gold-shimmer {
+  display: inline-block; /* required so padding expands the background clip area */
+  padding: 0.12em 0.06em; /* prevents script font ascenders/descenders from clipping */
+  background: linear-gradient(
+    90deg,
+    #8B6914 0%,
+    #C9A84C 20%,
+    #FFD700 40%,
+    #E8C96A 50%,
+    #FFD700 60%,
+    #C9A84C 80%,
+    #8B6914 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Tile grid texture (references the business card) ── */
+.tile-bg {
+  background-image:
+    linear-gradient(rgba(201, 168, 76, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ── Gold foil vertical stripe ── */
+.gold-foil-stripe {
+  background: linear-gradient(
+    180deg,
+    #3a2600 0%,
+    #C9A84C 15%,
+    #FFD700 30%,
+    #E8C96A 45%,
+    #C9A84C 60%,
+    #FFD700 75%,
+    #C9A84C 90%,
+    #3a2600 100%
+  );
+}
+
+/* ── Thin horizontal gold gradient divider ── */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+}
+
+/* ── Entrance animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* ── Gold filled button ── */
+.btn-gold {
+  background: linear-gradient(135deg, #8B6914, #C9A84C, #FFD700, #C9A84C, #8B6914);
+  background-size: 200% auto;
+  transition: background-position 0.5s, transform 0.2s, box-shadow 0.3s;
+}
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.4);
+}
+
+/* ── Gold outline button ── */
+.btn-outline-gold {
+  border: 1.5px solid #C9A84C;
+  color: #C9A84C;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+.btn-outline-gold:hover {
+  background: rgba(201, 168, 76, 0.08);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ── Service card hover ── */
+.service-card {
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(201, 168, 76, 0.2);
+  border-color: rgba(201, 168, 76, 0.6);
+}
