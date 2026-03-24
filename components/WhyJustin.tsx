@@ -35,7 +35,7 @@ const reasons = [
 
 export default function WhyJustin() {
   return (
-    <section id="why-justin" className="py-28 px-6 bg-[#141414] relative">
+    <section id="why-justin" className="pt-14 pb-28 px-6 bg-[#141414] relative">
       <div className="absolute right-0 top-0 bottom-0 w-1.5 gold-foil-stripe opacity-80" />
 
       <div className="max-w-7xl mx-auto">

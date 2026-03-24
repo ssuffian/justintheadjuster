@@ -59,7 +59,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 px-6 bg-[#141414] relative">
+    <section id="services" className="pt-28 pb-0 px-6 bg-[#141414] relative">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -84,15 +84,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Footer CTA */}
-        <div className="text-center mt-14">
-          <p className="text-cream/40 text-sm font-body mb-4">
-            Don&rsquo;t see your claim type? We handle all property damage claims.
-          </p>
-          <a href="#contact" className="inline-block btn-outline-gold px-8 py-3 text-xs tracking-widest uppercase rounded-sm">
-            Discuss Your Claim
-          </a>
-        </div>
       </div>
     </section>
   )
@@ -100,34 +91,24 @@ export default function Services() {
 
 function ServiceCard({ service }: { service: (typeof services)[0] }) {
   return (
-    <div className="service-card bg-[#1a1a1a] p-7 rounded-sm relative overflow-hidden group">
+    <div className="service-card bg-[#1a1a1a] p-5 rounded-sm relative overflow-hidden group flex gap-4 items-start">
       {/* Corner accent lines */}
       <div className="absolute top-0 left-0 w-14 h-px bg-gradient-to-r from-gold/50 to-transparent" />
       <div className="absolute top-0 left-0 h-14 w-px bg-gradient-to-b from-gold/50 to-transparent" />
 
       {/* Icon */}
-      <div className="mb-5">{service.icon}</div>
+      <div className="flex-shrink-0 mt-0.5">{service.icon}</div>
 
-      {/* Title */}
-      <h3 className="font-display text-xl text-gold font-medium mb-3 tracking-wide">
-        {service.title}
-      </h3>
+      <div>
+        {/* Title */}
+        <h3 className="font-display text-lg text-gold font-medium mb-2 tracking-wide">
+          {service.title}
+        </h3>
 
-      {/* Description */}
-      <p className="text-cream/75 text-sm leading-relaxed font-body mb-5">
-        {service.description}
-      </p>
-
-      {/* Keyword tags */}
-      <div className="flex flex-wrap gap-2">
-        {service.keywords.map((kw) => (
-          <span
-            key={kw}
-            className="text-[10px] text-gold/45 border border-gold/12 px-2.5 py-1 rounded-sm tracking-wide font-body"
-          >
-            {kw}
-          </span>
-        ))}
+        {/* Description */}
+        <p className="text-cream/75 text-sm leading-relaxed font-body">
+          {service.description}
+        </p>
       </div>
 
       {/* Bottom glow on hover */}

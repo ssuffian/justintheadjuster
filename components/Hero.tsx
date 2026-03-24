@@ -44,20 +44,17 @@ export default function Hero() {
           Your Advocate When It Matters Most
         </p>
 
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up delay-600">
-          <a
-            href="#contact"
-            className="btn-gold text-black font-semibold px-8 py-4 text-xs tracking-[0.2em] uppercase rounded-sm w-full sm:w-auto"
-          >
-            Get a Free Claim Review
-          </a>
+        {/* CTA */}
+        <div className="flex flex-col items-center gap-3 animate-fade-up delay-600">
           <a
             href="tel:2672212763"
-            className="btn-outline-gold px-8 py-4 text-xs tracking-[0.2em] uppercase rounded-sm w-full sm:w-auto font-body"
+            className="btn-gold text-black font-semibold px-8 py-4 text-xs tracking-[0.2em] uppercase rounded-sm w-full sm:w-auto"
           >
             Call 267-221-2763
           </a>
+          <p className="text-cream/45 text-[10px] tracking-[0.25em] uppercase font-body">
+            Get a free claim review
+          </p>
         </div>
 
         {/* Damage type pills */}
