@@ -1,23 +1,16 @@
 import type { Metadata } from 'next'
-import { Great_Vibes, Cormorant_Garamond, Outfit } from 'next/font/google'
+import { Oswald, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 
-const greatVibes = Great_Vibes({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-script',
-  display: 'swap',
-})
-
-const cormorant = Cormorant_Garamond({
-  weight: ['300', '400', '500', '600', '700'],
+const oswald = Oswald({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
 })
 
-const outfit = Outfit({
-  weight: ['300', '400', '500', '600', '700'],
+const sourceSans = Source_Sans_3({
+  weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
@@ -45,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${greatVibes.variable} ${cormorant.variable} ${outfit.variable} bg-[#0a0a0a] text-cream font-body antialiased`}
+        className={`${oswald.variable} ${sourceSans.variable} bg-[#C9A84C] text-[#1a1a1a] font-body antialiased`}
       >
         {children}
       </body>

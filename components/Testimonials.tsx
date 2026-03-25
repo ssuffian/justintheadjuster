@@ -29,7 +29,7 @@ function Stars({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <span key={i} className="text-gold text-base leading-none">&#9733;</span>
+        <span key={i} className="text-[#1a1a1a] text-base leading-none">&#9733;</span>
       ))}
     </div>
   )
@@ -37,18 +37,17 @@ function Stars({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-28 px-6 bg-[#111111] relative overflow-hidden">
-      <div className="absolute inset-0 tile-bg opacity-60" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.04),transparent)]" />
+    <section id="testimonials" className="py-28 px-6 bg-[#B8952E] relative overflow-hidden">
+      <div className="absolute inset-0 brick-bg opacity-30" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-gold/60 text-[10px] tracking-[0.45em] uppercase font-body mb-4">What Clients Say</p>
-          <h2 className="font-display text-4xl md:text-5xl text-cream font-light mb-5">
-            Real Results. <span className="italic text-gold">Real People.</span>
+          <p className="text-[#1a1a1a]/50 text-[10px] tracking-[0.45em] uppercase font-body font-bold mb-4">What Clients Say</p>
+          <h2 className="font-display text-4xl md:text-5xl text-[#1a1a1a] font-bold uppercase mb-5">
+            Real Results. <span className="text-[#1a1a1a]/70">Real People.</span>
           </h2>
-          <div className="w-20 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto" />
+          <div className="w-20 h-0.5 bg-[#1a1a1a]/20 mx-auto" />
         </div>
 
         {/* Cards */}
@@ -56,33 +55,33 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-[#1a1a1a] border border-gold/12 p-7 relative hover:border-gold/32 transition-all duration-300 group"
+              className="bg-[#D4B870] border border-[#1a1a1a]/12 p-7 relative hover:border-[#1a1a1a]/30 transition-all duration-300 group"
             >
-              {/* Top gold line */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent" />
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#1a1a1a]/15" />
 
               {/* Decorative quote mark */}
-              <div className="font-display text-7xl text-gold/10 leading-none -mt-3 mb-3 select-none">&ldquo;</div>
+              <div className="font-display text-7xl text-[#1a1a1a]/10 leading-none -mt-3 mb-3 select-none">&ldquo;</div>
 
               <Stars count={t.rating} />
 
-              <span className="inline-block mt-3 mb-4 text-[10px] text-gold/50 border border-gold/15 px-2.5 py-1 tracking-wider font-body">
+              <span className="inline-block mt-3 mb-4 text-[10px] text-[#1a1a1a]/50 border border-[#1a1a1a]/15 px-2.5 py-1 tracking-wider font-body font-bold">
                 {t.service}
               </span>
 
-              <p className="text-cream/80 text-sm leading-relaxed font-body italic mb-6">
+              <p className="text-[#1a1a1a]/80 text-sm leading-relaxed font-body italic mb-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
-              <div className="gold-divider mb-4" />
+              <div className="dark-divider mb-4" />
 
-              <p className="text-cream/80 font-display font-medium">{t.name}</p>
-              <p className="text-gold/45 text-xs tracking-wider mt-0.5 font-body">{t.location}</p>
+              <p className="text-[#1a1a1a]/90 font-display font-bold uppercase">{t.name}</p>
+              <p className="text-[#1a1a1a]/45 text-xs tracking-wider mt-0.5 font-body">{t.location}</p>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-cream/25 text-[10px] tracking-widest uppercase mt-10 font-body">
+        <p className="text-center text-[#1a1a1a]/25 text-[10px] tracking-widest uppercase mt-10 font-body">
           Testimonials represent typical client experiences
         </p>
       </div>

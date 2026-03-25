@@ -9,17 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gold: {
+        brick: {
           DEFAULT: '#C9A84C',
-          light: '#E8C96A',
-          dark: '#8B6914',
-          bright: '#FFD700',
+          light: '#D4B870',
+          lighter: '#E0CA8E',
+          dark: '#B8952E',
+          darker: '#8B6914',
         },
-        cream: '#F5F0E8',
       },
       fontFamily: {
-        script: ['var(--font-script)', 'cursive'],
-        display: ['var(--font-display)', 'serif'],
+        display: ['var(--font-display)', 'sans-serif'],
         body: ['var(--font-body)', 'sans-serif'],
       },
     },

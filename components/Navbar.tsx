@@ -24,13 +24,13 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0a0a0a]/96 backdrop-blur-sm shadow-[0_2px_40px_rgba(201,168,76,0.08)]'
+          ? 'bg-[#C9A84C]/96 backdrop-blur-sm shadow-[0_2px_40px_rgba(0,0,0,0.1)]'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-script text-3xl gold-shimmer">
+        <a href="#" className="font-display text-3xl font-bold uppercase text-[#1a1a1a]">
           Justin the Adjuster
         </a>
 
@@ -40,7 +40,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-xs tracking-[0.2em] text-cream/55 hover:text-gold transition-colors duration-300 uppercase font-body"
+              className="text-xs tracking-[0.2em] text-[#1a1a1a]/60 hover:text-[#1a1a1a] transition-colors duration-300 uppercase font-body font-semibold"
             >
               {link.label}
             </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <a
           href="tel:2672212763"
-          className="hidden lg:flex items-center gap-2 btn-gold text-black font-semibold px-5 py-2.5 text-xs tracking-widest uppercase rounded-sm"
+          className="hidden lg:flex items-center gap-2 btn-black font-display font-bold px-5 py-2.5 text-xs tracking-widest uppercase rounded-sm"
         >
           <PhoneIcon />
           267-221-2763
@@ -59,7 +59,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden text-gold p-1"
+          className="lg:hidden text-[#1a1a1a] p-1"
           aria-label="Toggle menu"
         >
           {menuOpen ? <XIcon /> : <MenuIcon />}
@@ -68,20 +68,20 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className="lg:hidden bg-[#0a0a0a]/98 border-t border-gold/15 px-6 py-6 flex flex-col gap-1">
+        <div className="lg:hidden bg-[#C9A84C]/98 border-t border-black/10 px-6 py-6 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-cream/70 hover:text-gold transition-colors text-base py-3 border-b border-gold/10 font-body"
+              className="text-[#1a1a1a]/80 hover:text-[#1a1a1a] transition-colors text-base py-3 border-b border-black/10 font-body font-medium"
             >
               {link.label}
             </a>
           ))}
           <a
             href="tel:2672212763"
-            className="btn-gold text-black font-semibold px-5 py-3.5 text-sm tracking-widest uppercase text-center mt-4 rounded-sm"
+            className="btn-black font-display font-bold px-5 py-3.5 text-sm tracking-widest uppercase text-center mt-4 rounded-sm"
           >
             Call 267-221-2763
           </a>

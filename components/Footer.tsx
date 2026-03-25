@@ -2,18 +2,16 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#050505] border-t border-gold/12 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/35 to-transparent" />
-
+    <footer className="bg-[#1a1a1a] border-t-2 border-[#8B6914] relative">
       <div className="max-w-7xl mx-auto px-6 py-14">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
 
           {/* Brand */}
           <div>
-            <p className="font-script gold-shimmer" style={{ fontSize: '2.2rem' }}>
+            <p className="font-display text-3xl font-bold uppercase text-[#C9A84C]">
               Justin the Adjuster
             </p>
-            <p className="text-cream/35 text-sm font-body leading-relaxed">
+            <p className="text-white/50 text-sm font-body leading-relaxed mt-2">
               Your advocate when it matters most. Licensed public adjuster serving
               Pennsylvania and New Jersey.
             </p>
@@ -21,7 +19,7 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <p className="text-gold/55 text-[10px] tracking-[0.45em] uppercase font-body mb-5">
+            <p className="text-[#C9A84C]/70 text-[10px] tracking-[0.45em] uppercase font-body font-bold mb-5">
               Quick Links
             </p>
             <ul className="space-y-2.5">
@@ -35,7 +33,7 @@ export default function Footer() {
                 <li key={label}>
                   <a
                     href={href}
-                    className="text-cream/40 hover:text-gold text-sm transition-colors font-body"
+                    className="text-white/40 hover:text-[#C9A84C] text-sm transition-colors font-body"
                   >
                     {label}
                   </a>
@@ -46,23 +44,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-gold/55 text-[10px] tracking-[0.45em] uppercase font-body mb-5">
+            <p className="text-[#C9A84C]/70 text-[10px] tracking-[0.45em] uppercase font-body font-bold mb-5">
               Contact
             </p>
             <div className="space-y-3">
               <a
                 href="tel:2672212763"
-                className="block text-cream/55 hover:text-gold text-sm transition-colors font-body"
+                className="block text-white/55 hover:text-[#C9A84C] text-sm transition-colors font-body"
               >
                 267-221-2763
               </a>
               <a
                 href="mailto:justintheadjusterpa@gmail.com"
-                className="block text-cream/55 hover:text-gold text-sm transition-colors font-body break-all"
+                className="block text-white/55 hover:text-[#C9A84C] text-sm transition-colors font-body break-all"
               >
                 justintheadjusterpa@gmail.com
               </a>
-              <p className="text-cream/35 text-sm font-body">
+              <p className="text-white/35 text-sm font-body">
                 Licensed in PA &amp; NJ
               </p>
             </div>
@@ -71,11 +69,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gold/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-cream/25 text-xs font-body">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-white/25 text-xs font-body">
             &copy; {year} Justin the Adjuster. All rights reserved. Licensed Public Adjuster &mdash; PA &amp; NJ.
           </p>
-          <p className="text-cream/18 text-xs font-body italic">
+          <p className="text-white/18 text-xs font-body italic">
             Justin the Adjuster &mdash; Your Advocate When It Matters Most
           </p>
         </div>
