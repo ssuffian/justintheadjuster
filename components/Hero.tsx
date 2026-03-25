@@ -69,7 +69,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-up delay-800 flex flex-col items-center gap-2">
         <div className="w-px h-10 bg-gradient-to-b from-black/40 to-transparent animate-pulse" />
-        <span className="text-[#1a1a1a]/30 text-[9px] tracking-[0.4em] uppercase font-body font-bold">Scroll</span>
+        <span className="text-[#1a1a1a]/30 text-[9px] tracking-[0.4em] uppercase font-body font-bold mr-[-0.4em]">Scroll</span>
       </div>
     </section>
   )
